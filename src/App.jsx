@@ -4,11 +4,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Form from "./components/Form";
 import Post from "./components/Post";
-const urlBaseServer = "http://localhost:3000"; // Asegúrate de que esta URL sea la correcta
+
+const urlBaseServer = "http://localhost:3000";
 
 function App() {
   const [titulo, setTitulo] = useState("");
-  const [imgSrc, setImgSRC] = useState("");
+  const [imgSrc, setImgSrc] = useState("");  // Corregí el nombre de la variable
   const [descripcion, setDescripcion] = useState("");
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
@@ -69,7 +70,7 @@ function App() {
         <div className="col-12 col-sm-4">
           <Form
             setTitulo={setTitulo}
-            setImgSRC={setImgSRC}
+            setImgSrc={setImgSrc}
             setDescripcion={setDescripcion}
             agregarPost={agregarPost}
           />
