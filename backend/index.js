@@ -1,10 +1,8 @@
 // index.js
 
-import express from 'express';
-import cors from 'cors';
-import { obtenerPosts, crearNuevoPost } from '../consulta';
-// Resto del código...
-
+const express = require('express');
+const cors = require('cors');
+const { obtenerPosts, crearNuevoPost } = require('./consulta');
 
 const app = express();
 const PORT = 3000;
